@@ -15,7 +15,7 @@ plotBAI(
 )
 }
 \arguments{
-\item{inTRW}{tibble. The first object resulting from the \code{TRW_readExcel} function.}
+\item{inTRW}{tibble. The first object resulting from the \code{import_rwl} function.}
 
 \item{linewidth_BAI}{numeric. line size for BAI.}
 
@@ -36,7 +36,7 @@ None. A plot is produced.
 }
 \description{
 Function for plotting basal area increment (BAI) values derived from \code{inTRW} object
-using the first \code{tibble} produced by the function \code{TRW_readExcel}.
+using the first \code{tibble} produced by the function \code{import_rwl}.
 }
 \details{
 This function generates a basic plot displaying the mean chronology

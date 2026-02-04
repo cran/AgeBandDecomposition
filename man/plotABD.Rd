@@ -19,7 +19,7 @@ plotABD(
 }
 \arguments{
 \item{inTRW}{tibble. A tibble. The input dataset obtained from
-the \code{TRW_readExcel()} function.}
+the \code{import_rwl()} function.}
 
 \item{min_nTrees_year}{Numeric. The minimum number of trees per year required within each age class
 to be included in the analysis.
@@ -66,7 +66,7 @@ None. A multipanel plot.
 }
 \description{
 Function for plotting ABD values from \code{inTRW} object using the two \code{tibble} objects
-produced by the function \code{TRW_readExcel}.
+produced by the function \code{import_rwl}.
 }
 \details{
 This function produces a multi-panel plot with three graphs:

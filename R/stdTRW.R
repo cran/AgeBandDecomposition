@@ -11,7 +11,7 @@
 #' (Mazza and Sarris, 2021; Sarris et al., 2007).
 #'
 #' @param inTRW
-#' tibble. The first object resulting from the `TRW_readExcel` function.
+#' tibble. The first object resulting from the `import_rwl` function.
 #'
 #' @return
 #' A tibble with the following columns: year, tree_code, TRW, meanTRW, and stdTRW.
@@ -45,7 +45,7 @@
 #' below for how to obtain `stdTRW_df` object.
 #' 
 #' @family ABD functions
-#' @seealso \code{\link{TRW_readExcel}}, \code{\link{ABD}}
+#' @seealso \code{\link{import_rwl}}, \code{\link{ABD}}
 #' 
 #' @export
 #' 

@@ -8,33 +8,27 @@ ABD(inTRW, min_nTrees_year = 3, pct_stdTRW_th = 0.5, pct_Trees_th = 0.3)
 }
 \arguments{
 \item{inTRW}{tibble. A tibble. The input dataset obtained from
-the \code{TRW_readExcel()} function.}
+the \code{import_rwl()} function.}
 
-\item{min_nTrees_year}{Numeric. The minimum number of trees per year required within each age class
-to be included in the analysis.
-The default is 3.
+\item{min_nTrees_year}{Numeric. Sets the minimum number of trees per year required within each age class
+to be included in the analysis. The default is 3.
 Using less than three trees may result in poor representation of within-class
 variability and is not recommended unless data availability is limited.}
 
-\item{pct_stdTRW_th}{Numeric. It defines the threshold for the minimum
-proportion of standardized tree-ring width values required within a given
-age class.
-The default is set to 0.5,
-meaning that at least 50\% of the possible
-values must be present (e.g., 6 out of 10 values for 10-year age bands,
-or 11 out of 20 for 20-year bands).
-For instance, the final age band of a 94-year-old tree
-(i.e., the 91–100-year band) includes only 4 years of growth.
-Since this number of years below the threshold, we recommend
-excluding that tree from the corresponding age band group.}
+\item{pct_stdTRW_th}{Numeric. Sets the threshold for the minimum proportion of
+standardized tree-ring width values required within a given age class.
+The default is set to 0.5, meaning that at least 50\% of the possible values
+must be present (e.g., 6 out of 10 values for 10-year age bands, or 11 out
+of 20 for 20-year bands). For instance, the final age band of a 94-year-old
+tree (i.e., the 91–100-year band) includes only 4 years of growth.
+Since this number of years below the threshold, we recommend excluding that
+tree from the corresponding age band group.}
 
-\item{pct_Trees_th}{Numeric. It defines the threshold used to calculate
-the mean standardized tree-ring widths within each age band.
-The default value is 0.3.
-However, when working with small sample sizes (approximately 20 trees or fewer),
-it is advisable to increase the threshold to 0.5.
-This adjustment helps retain more trees in the analysis while still
-accounting for natural growth variability.}
+\item{pct_Trees_th}{Numeric. Sets the minimum number of samples (i.e., trees)
+required to compute the mean standardized tree-ring widths within each age band.
+The default value is 0.3. However, when working with small sample sizes
+(approximately 20 trees or fewer), increasing the threshold to 0.5 is recommended
+to ensure that more trees are included in the analysis.}
 }
 \value{
 A tibble with the following columns: year, N_ageBands, ABD, and ABDsd.
@@ -63,16 +57,16 @@ If working with approximately 20 trees or fewer,
 a threshold of 0.5 is suggested.
 
 Please, see the \code{Examples} section below for a
-demonstration using a typical input tibble obtained with \code{TRW_readExcel()}.
+demonstration using a typical input tibble obtained with \code{import_rwl()}.
 }
 \examples{
 ABD(inTRW)
 }
 \seealso{
-\code{\link{TRW_readExcel}}, \code{\link{stdTRW}}, \code{\link{plotABD}}
+\code{\link{import_rwl}}, \code{\link{stdTRW}}, \code{\link{plotABD}}
 
 Other ABD functions: 
-\code{\link{TRW_readExcel}()},
+\code{\link{import_rwl}()},
 \code{\link{stdTRW}()}
 }
 \concept{ABD functions}

@@ -7,7 +7,7 @@
 stdTRW(inTRW)
 }
 \arguments{
-\item{inTRW}{tibble. The first object resulting from the \code{TRW_readExcel} function.}
+\item{inTRW}{tibble. The first object resulting from the \code{import_rwl} function.}
 }
 \value{
 A tibble with the following columns: year, tree_code, TRW, meanTRW, and stdTRW.
@@ -62,10 +62,10 @@ and tree growth in the eastern Mediterranean.
 Glob. Chang. Biol. 13 (6), 1187–1200. https://doi.org/10.1111/j.1365-2486.2007.01348.x.
 }
 \seealso{
-\code{\link{TRW_readExcel}}, \code{\link{ABD}}
+\code{\link{import_rwl}}, \code{\link{ABD}}
 
 Other ABD functions: 
 \code{\link{ABD}()},
-\code{\link{TRW_readExcel}()}
+\code{\link{import_rwl}()}
 }
 \concept{ABD functions}

@@ -11,6 +11,9 @@ utils::globalVariables(
     "meanTRW", "mean_stdTRW_year", "nSamples", "name", "norm_out",
     "sampRatio", "start_year", "starts_with", "stdTRW_byAgeClass",
     "tree_code", "value", "y_age_code", "year", "year_range",
-    'TRW_cumsum_arg'
+    "TRW_cumsum_arg",
+    
+    # Aggiunte per import_rwl
+    "tree", "pith.offset", "first_year", "offset_data"
   )
 )

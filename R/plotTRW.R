@@ -2,10 +2,10 @@
 #'
 #' @description
 #' Function for plotting TRW values from `inTRW` object using the first 
-#' `tibble` produced by the function `TRW_readExcel`.
+#' `tibble` produced by the function `import_rwl`.
 #' 
 #' @param inTRW
-#' tibble. The first object resulting from the `TRW_readExcel` function.
+#' tibble. The first object resulting from the `import_rwl` function.
 #' 
 #' @param linewidth_TRW numeric. line size for TRW.
 #' 

@@ -2,11 +2,11 @@
 #'
 #' @description
 #' Function for plotting ABD values from `inTRW` object using the two `tibble` objects 
-#' produced by the function `TRW_readExcel`.
+#' produced by the function `import_rwl`.
 #' 
 #' @param inTRW
 #' tibble. A tibble. The input dataset obtained from 
-#' the `TRW_readExcel()` function.
+#' the `import_rwl()` function.
 #' 
 #' @param min_nTrees_year 
 #' Numeric. The minimum number of trees per year required within each age class 
@@ -216,7 +216,7 @@ plotABD <- function(inTRW
                                              by = byYears))
   
   # fusione ----
-  p <- (plot1 | patchwork::wrap_plots(plot2, plot3, ncol = 1, heights = c(1, 2))) +
+  p <- (plot1 | patchwork::wrap_plots(plot2, plot3, ncol = 1, heights = c(1, 1))) +
     patchwork::plot_layout(widths = c(2, 3))
   
   return(p)

@@ -2,10 +2,10 @@
 #'
 #' @description
 #' Function for plotting basal area increment (BAI) values derived from `inTRW` object 
-#' using the first `tibble` produced by the function `TRW_readExcel`.
+#' using the first `tibble` produced by the function `import_rwl`.
 #' 
 #' @param inTRW
-#' tibble. The first object resulting from the `TRW_readExcel` function.
+#' tibble. The first object resulting from the `import_rwl` function.
 #' 
 #' @param linewidth_BAI  numeric. line size for BAI.
 #' 

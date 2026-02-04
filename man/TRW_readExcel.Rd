@@ -2,72 +2,28 @@
 % Please edit documentation in R/TRW_readExcel.R
 \name{TRW_readExcel}
 \alias{TRW_readExcel}
-\title{TRW_readExcel}
+\title{TRW_readExcel (Deprecated)}
 \usage{
-TRW_readExcel(path, sheet, ageBands, limitFirst20y, verbose = TRUE)
+TRW_readExcel(path, sheet, ageBands, limitFirst20y = FALSE, verbose = TRUE)
 }
 \arguments{
-\item{path}{Path to the xls/xlsx file. The Excel file must be compiled following
-the instructions of the package at the git-page \url{https://gitlab.com/Puletti/agebanddecomposition_rpackage}.
-See also \strong{Details} here following.}
+\item{path}{Path to the xls/xlsx file.}
 
-\item{sheet}{Sheet to read. Either a string (the name of a sheet),
-or an integer (the position of the sheet).
-Ignored if the sheet is specified via range.
-If neither argument specifies the sheet, defaults to the first sheet.}
+\item{sheet}{Sheet to read.}
 
-\item{ageBands}{character. Setting the age band window. It must be set to '1010' if all the
-age classes have the same size (10 years). It must be '1020' if the age classes
-have different sizes: 10 years till 100 and then 20 years size.}
+\item{ageBands}{character. Age band window setting.}
 
-\item{limitFirst20y}{logical. This argument removes the first 20 years from each tree.
-Default is FALSE (no data filtering).}
+\item{limitFirst20y}{logical. Remove first 20 years from each tree.}
 
-\item{verbose}{logical. If TRUE, prints additional information during import.}
+\item{verbose}{logical. Print additional information.}
 }
 \value{
-A list of two objects. The first object is a tibble representing the
-imported dataset in long format. In this tibble the last two columns are
-an identification number (id_by_years) and two grouping variables (age_class and ageBands).
-The second object in the list is a lookup table (tibble), useful for further steps.
+A list of two objects (see original documentation).
 }
 \description{
-This function supports the first step of data import from an Excel file
-and arranges the dataset properly for ABD analysis.
-}
-\details{
-The provided Excel \code{.xlsx} file contains tree-ring width (TRW) chronologies organized by year.
-Each column represents an individual tree (e.g., \code{tree01}, \code{tree02}, \code{tree03}, etc.),
-with rows corresponding to calendar years.
-Missing values within the ring-width series (e.g., due to measurement gaps or broken sections)
-and the estimated number of rings to the pith
-for incomplete cores must be explicitly coded as \code{-999}.
-
-An example \code{.xlsx} file formatted accordingly is available on the package's GitLab page.
-
-\url{https://gitlab.com/Puletti/agebanddecomposition_rpackage}
-
-This example can be used to test the functions or as a template for preparing your own data.
-}
-\examples{
-# Download the 'ABD_example.xlsx' file from the GitLab page of the package
-package_gitlab_site <- 'https://gitlab.com/Puletti/agebanddecomposition_rpackage'
-xls_url <- "/-/raw/main/studio/dati/TRW_example.xlsx"
-url <- paste0(package_gitlab_site,xls_url)
-
-tmpfile <- tempfile(fileext = ".xlsx")
-download.file(url,
-              tmpfile,
-              mode = "wb")
-
-inTRW_example <- TRW_readExcel(tmpfile, sheet = "Example", ageBands = '1010', limitFirst20y = FALSE)
-inTRW_example
+\strong{This function is deprecated and will be removed in a future version.}
+Please use \code{\link{import_rwl}} instead after converting your data to RWL format.
 }
 \seealso{
-\code{\link{stdTRW}}, \code{\link{ABD}}
-
-Other ABD functions: 
-\code{\link{ABD}()},
-\code{\link{stdTRW}()}
+\code{\link{import_rwl}}
 }
-\concept{ABD functions}

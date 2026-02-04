@@ -15,7 +15,7 @@ plotTRW(
 )
 }
 \arguments{
-\item{inTRW}{tibble. The first object resulting from the \code{TRW_readExcel} function.}
+\item{inTRW}{tibble. The first object resulting from the \code{import_rwl} function.}
 
 \item{linewidth_TRW}{numeric. line size for TRW.}
 
@@ -36,7 +36,7 @@ None. A plot is produced.
 }
 \description{
 Function for plotting TRW values from \code{inTRW} object using the first
-\code{tibble} produced by the function \code{TRW_readExcel}.
+\code{tibble} produced by the function \code{import_rwl}.
 }
 \details{
 This function generates a basic plot displaying the mean chronology
