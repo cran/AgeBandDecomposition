@@ -64,8 +64,15 @@
 #' download.file(paste0(package_gitlab_site, po_url),
 #'               tmpfile_po,
 #'               mode = "wb")
+#'               
+#' # View the two files in console
+#' dplR::read.rwl(tmpfile_rwl)
+#' read.table(tmpfile_po, header = TRUE, dec = ".")
 #' 
-#' # Import the data
+#' # The same (internal) dataset can be viewed by the following command
+#' rwl_test_data; po_test_data
+#' 
+#' # Import data
 #' inData <- import_rwl(rwl_path = tmpfile_rwl, 
 #'                              po_path = tmpfile_po, 
 #'                              ageBands = '1010', 
